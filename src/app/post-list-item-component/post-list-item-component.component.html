@@ -1,0 +1,22 @@
+<li [ngClass]="{'list-group-item' : true,
+                'list-group-item-success' : getColor() === 'green',
+                'list-group-item-danger' : getColor()  === 'red' }"> 
+<!--<li [ngClass]="{'list-group-item' : true,
+'list-group-item-success' : getColor() === 'green',
+'list-group-item-danger' : getColor()=== 'red'}">-->
+
+<div class="row"> 
+    <div class="col-md-4">
+        <h4>{{title}}</h4>
+    </div>
+
+    <div class="col-md-4 offset-md-4">{{created_at | date: "short"  }}</div>
+</div>
+
+    <p>{{contenu}}</p>
+
+    <!-- Affichage des buton en fonction de leur etat-->
+    <button class="btn btn-success" (click)="love()">LoveIt</button>
+    <button class="btn btn-danger" (click)="dontLove()">DontLoveIt</button>
+
+</li>
